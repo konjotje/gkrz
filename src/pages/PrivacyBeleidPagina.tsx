@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
-const Privacybeleid = () => {
+const PrivacyPolicyPage = () => {
   return (
     <Layout>
       <Helmet>
@@ -81,4 +81,4 @@ const Privacybeleid = () => {
   );
 };
 
-export default Privacybeleid;
+export default PrivacyPolicyPage;

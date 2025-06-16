@@ -1,15 +1,14 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Layout from '@/components/layout/HoofdLayoutComponent';
-import { Button } from '@/components/ui/KnopComponent';
-import { BlogPostCard } from '@/components/BlogPostCard';
-import { Clock, User, Calendar, ArrowLeft, Share2, Star, Check } from 'lucide-react';
-import { casinos, getCasinoUrl } from '@/pages/CasinoOverzichtPagina';
-import { blogPosts } from '../lib/blogBerichtenData';
+import MainLayout from '@/components/layout/MainLayout';
+import { BlogPostCard } from '@/components/features/blog/BlogPostCard';
+import { Button } from '@/components/ui/button';
+import CasinoCard from '@/components/features/casino/CasinoCard';
+import { blogPosts } from '@/lib/data/blogPosts';
+import { casinos, getCasinoUrl } from '@/pages/CasinoOverviewPage';
 import { Helmet } from 'react-helmet';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import CasinoCard from '@/components/CasinoCard';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -24,7 +23,7 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <Layout>
+      <MainLayout>
         <div className="container mx-auto px-4 py-12 text-center">
           <h1 className="mb-4 text-2xl font-bold">Blog niet gevonden</h1>
           <p className="text-gray-600">Deze blogpost bestaat niet of is verwijderd.</p>
@@ -32,14 +31,14 @@ const BlogPost = () => {
             Terug naar het blogoverzicht
           </Link>
         </div>
-      </Layout>
+      </MainLayout>
     );
   }
 
   const shareUrl = window.location.href;
 
   return (
-    <Layout>
+    <MainLayout>
       <Helmet>
         <title>{post.title} | Gokkerz Casino Blog</title>
         <meta name="description" content={post.excerpt} />
@@ -290,7 +289,7 @@ const BlogPost = () => {
       <Analytics />
       {/* Vercel Speed Insights */}
       <SpeedInsights />
-    </Layout>
+    </MainLayout>
   );
 };
 

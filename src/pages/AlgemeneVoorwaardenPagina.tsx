@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
-const AlgemeneVoorwaarden = () => {
+const TermsAndConditionsPage = () => {
   return (
     <Layout>
       <Helmet>
@@ -79,4 +79,4 @@ const AlgemeneVoorwaarden = () => {
   );
 };
 
-export default AlgemeneVoorwaarden;
+export default TermsAndConditionsPage;

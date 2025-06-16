@@ -1,0 +1,3 @@
+export const bonusOffers = [
+  // ...inhoud uit bonussenData.ts...
+];

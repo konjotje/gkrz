@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button } from '@/components/ui/KnopComponent';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Star, Check } from 'lucide-react';
-import { casinoBrandColors, getGlassmorphismStyle } from '@/lib/casinoKleurenData';
+import { casinoBrandColors, getGlassmorphismStyle } from '@/lib/data/casinoBrandColors';
 
 export interface BonusCardRedesignProps {
   offer: {

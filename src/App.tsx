@@ -15,7 +15,7 @@ import CookieBeleidPagina from './pages/CookieBeleidPagina';
 import AlgemeneVoorwaardenPagina from './pages/AlgemeneVoorwaardenPagina';
 import SpellenPagina from './pages/SpellenPagina';
 import ScrollToTop from './components/ScrollToTop';
-import './App.css';
+import './styles/globals.css';
 
 function App() {
   return (

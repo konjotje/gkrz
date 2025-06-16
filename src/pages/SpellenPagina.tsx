@@ -1,7 +1,7 @@
 import React from "react";
 import GameCard from "../components/GameCard";
-import Layout from "@/components/layout/HoofdLayoutComponent";
-import HeroHeader from '@/components/HeroHeader';
+import MainLayout from '@/components/layout/MainLayout';
+import HeroHeader from '@/components/features/home/HeroHeader';
 import { Helmet } from "react-helmet";
 import { Gift, User, Shield } from 'lucide-react';
 
@@ -33,9 +33,9 @@ const games = [
 	},
 ];
 
-const Games: React.FC = () => {
+const GamesPage: React.FC = () => {
 	return (
-		<Layout>
+		<MainLayout>
 			<Helmet>
 				<title>Casino Games 2025 | Speel Blackjack & Meer | Gokkerz.nl</title>
 				<meta name="description" content="Ontdek en speel de beste online casino games bij Gokkerz.nl. Speel nu Blackjack of bekijk welke spellen binnenkort beschikbaar zijn!" />
@@ -58,8 +58,8 @@ const Games: React.FC = () => {
 					))}
 				</div>
 			</section>
-		</Layout>
+		</MainLayout>
 	);
 };
 
-export default Games;
+export default GamesPage;

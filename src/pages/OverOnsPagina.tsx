@@ -1,17 +1,17 @@
 import React from 'react';
-import Layout from '@/components/layout/HoofdLayoutComponent';
-import HeroHeader from '@/components/HeroHeader';
+import MainLayout from '@/components/layout/MainLayout';
+import HeroHeader from '@/components/features/home/HeroHeader';
 import { Shield, Users, Award, MessageCircle, Gift, Star, Wallet, Search, ArrowRight, ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/KnopComponent';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
-const OverOns = () => {
+const AboutUs = () => {
   return (
-    <Layout>
+    <MainLayout>
       <Helmet>
         <title>Over Ons | Gokkerz.nl - Dé Online Casino Expert</title>
         <meta name="description" content="Leer meer over Gokkerz.nl, dé onafhankelijke gids voor online casino's in Nederland. Ontdek onze missie, ons team en hoe wij je helpen het beste casino te vinden." />
@@ -332,8 +332,8 @@ const OverOns = () => {
       <Analytics />
       {/* Vercel Speed Insights */}
       <SpeedInsights />
-    </Layout>
+    </MainLayout>
   );
 };
 
-export default OverOns;
+export default AboutUs;

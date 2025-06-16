@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
-const NotFound = () => {
+const NotFoundPage = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -30,4 +30,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

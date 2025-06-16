@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import Layout from '@/components/layout/HoofdLayoutComponent';
-import HeroHeader from '@/components/HeroHeader';
-import { Button } from '@/components/ui/KnopComponent';
+import MainLayout from '@/components/layout/MainLayout';
+import HeroHeader from '@/components/features/home/HeroHeader';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { useToast } from '@/hooks/gebruikToastHook';
+import { useToast } from '@/hooks/useToast';
 import { Mail, MessageSquare } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
-const Contact = () => {
+const ContactPage = () => {
   const { toast } = useToast();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    <MainLayout>
       <Helmet>
         <title>Contact | Gokkerz.nl - Neem Contact Op</title>
         <meta name="description" content="Heb je vragen of opmerkingen? Neem contact op met ons team van casino experts. We helpen je graag met al je vragen over online casino's in Nederland." />
@@ -186,8 +186,8 @@ const Contact = () => {
       <Analytics />
       {/* Vercel Speed Insights */}
       <SpeedInsights />
-    </Layout>
+    </MainLayout>
   );
 };
 
-export default Contact;
+export default ContactPage;

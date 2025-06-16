@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Layout from '@/components/layout/HoofdLayoutComponent';
-import { Button } from '@/components/ui/KnopComponent';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Star, Shield, Gift, Check, Clock, ThumbsUp, Info, Users, Gamepad2, Wallet, Award, Calendar, Mail, Phone, Lock } from 'lucide-react';
-import { casinoBrandColors } from '@/lib/casinoKleurenData';
+import MainLayout from '@/components/layout/MainLayout';
+import { Button } from '@/components/ui/button';
+import { casinoBrandColors } from '@/lib/data/casinoBrandColors';
 import { casinos } from './CasinoOverzichtPagina';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
@@ -66,7 +63,7 @@ const CasinoReview = () => {
 
   if (!casino) {
     return (
-      <Layout>
+      <MainLayout>
         <div className="container mx-auto px-4 py-12 text-center">
           <h1 className="text-2xl font-bold mb-4">Casino niet gevonden</h1>
           <p className="text-gray-600">Het opgevraagde casino kon niet worden gevonden.</p>
@@ -74,7 +71,7 @@ const CasinoReview = () => {
             <a href="/casinos">Bekijk alle casino's</a>
           </Button>
         </div>
-      </Layout>
+      </MainLayout>
     );
   }
 
@@ -91,7 +88,7 @@ const CasinoReview = () => {
   };
 
   return (
-    <Layout>
+    <MainLayout>
       {/* Hero Section */}
       <div className="relative overflow-hidden" style={{
         background: `linear-gradient(135deg, ${brandColor}10 0%, #fff 100%)`,
@@ -756,7 +753,7 @@ const CasinoReview = () => {
       <Analytics />
       {/* Vercel Speed Insights */}
       <SpeedInsights />
-    </Layout>
+    </MainLayout>
   );
 };
 

@@ -1,7 +1,8 @@
 import React from 'react';
-import Layout from '@/components/layout/HoofdLayoutComponent';
-import HeroHeader from '@/components/HeroHeader';
-import { Button } from '@/components/ui/KnopComponent';
+import MainLayout from '@/components/layout/MainLayout';
+import HeroHeader from '@/components/features/home/HeroHeader';
+import { BlogPostCard } from '@/components/features/blog/BlogPostCard';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -24,7 +25,6 @@ import {
 import { Link } from 'react-router-dom';
 import { Separator } from '@/components/ui/separator';
 import { blogPosts } from '../lib/blogBerichtenData';
-import { BlogPostCard } from '@/components/BlogPostCard';
 import { Helmet } from 'react-helmet-async';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
@@ -77,7 +77,7 @@ const Blog = () => {
 
 
   return (
-    <Layout>
+    <MainLayout>
       <Helmet>
         <title>Casino Blog | Gokkerz.nl</title>
         <meta
@@ -207,7 +207,7 @@ const Blog = () => {
       <Analytics />
       {/* Vercel Speed Insights */}
       <SpeedInsights />
-    </Layout>
+    </MainLayout>
   );
 };
 

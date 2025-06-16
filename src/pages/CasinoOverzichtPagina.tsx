@@ -1,8 +1,11 @@
 import React from 'react';
-import Layout from '@/components/layout/HoofdLayoutComponent';
+import MainLayout from '@/components/layout/MainLayout';
 import { Helmet } from 'react-helmet-async';
-import { Button } from '@/components/ui/KnopComponent';
-import { Link } from 'react-router-dom';
+import HeroHeader from '@/components/features/home/HeroHeader';
+import CasinoCard from '@/components/features/casino/CasinoCard';
+import { casinoBrandColors, getGlassmorphismStyle } from '@/lib/data/casinoBrandColors';
+import { Button } from '@/components/ui/button';
+import useMobile from '@/hooks/useMobile';
 import { Star, Info, Shield, Check, ThumbsUp, Clock, Users, Gift } from 'lucide-react';
 import {
   Table,
@@ -20,14 +23,8 @@ import {
   CardHeader,
   CardFooter,
 } from '@/components/ui/card';
-import useMediaQuery from '@/hooks/gebruikMobielHook';
-import HeroHeader from '@/components/HeroHeader';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import { casinoLogoStyles } from '@/lib/styles';
-import { casinoBrandColors, getGlassmorphismStyle } from '@/lib/casinoKleurenData';
-import { adjustColor } from '@/lib/utils';
-import CasinoCard from '@/components/CasinoCard';
 
 export const casinos = [
   {
@@ -336,7 +333,7 @@ export const getCasinoUrl = (casinoName: string) => {
 };
 
 const Casinos = () => {
-  const isMobile = useMediaQuery('(max-width: 1023px)');
+  const isMobile = useMobile('(max-width: 1023px)');
 
   // Helper: hex kleur naar hue
   function hexToHue(hex: string): number {
@@ -363,7 +360,7 @@ const Casinos = () => {
   });
 
   return (
-    <Layout>
+    <MainLayout>
       <Helmet>
         <title>Online Casino's Nederland 2025 | Reviews & Vergelijking</title>
         <meta
@@ -606,7 +603,7 @@ const Casinos = () => {
       <Analytics />
       {/* Vercel Speed Insights */}
       <SpeedInsights />
-    </Layout>
+    </MainLayout>
   );
 };
 

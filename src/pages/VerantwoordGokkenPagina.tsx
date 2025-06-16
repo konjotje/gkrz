@@ -1,16 +1,16 @@
 import React from 'react';
-import Layout from '@/components/layout/HoofdLayoutComponent';
-import HeroHeader from '@/components/HeroHeader';
+import MainLayout from '@/components/layout/MainLayout';
+import HeroHeader from '@/components/features/home/HeroHeader';
 import { Shield, Info, AlertTriangle, Clock, BookOpen, Users, HelpCircle } from 'lucide-react';
-import { Button } from '@/components/ui/KnopComponent';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Helmet } from 'react-helmet-async';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
-const VerantwoordGokken = () => {
+const ResponsibleGamingPage = () => {
   return (
-    <Layout>
+    <MainLayout>
       <Helmet>
         <title>Verantwoord Gokken | Tips & Hulp bij Gokproblemen</title>
         <meta name="description" content="Leer hoe je veilig en verantwoord kunt gokken. Handige tips, tools en hulp bij gokproblemen. ✓ Preventie ✓ Hulpinstanties ✓ Direct contact" />
@@ -164,8 +164,8 @@ const VerantwoordGokken = () => {
       </div>
       <Analytics />
       <SpeedInsights />
-    </Layout>
+    </MainLayout>
   );
 };
 
-export default VerantwoordGokken;
+export default ResponsibleGamingPage;

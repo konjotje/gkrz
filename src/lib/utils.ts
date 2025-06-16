@@ -1,6 +1,10 @@
 // Utility function for className merging (Tailwind/React projects)
-export function cn(...classes: (string | undefined | false)[]) {
-  return classes.filter(Boolean).join(' ');
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  // Combines clsx and tailwind-merge for best of both worlds
+  return twMerge(clsx(inputs));
 }
 
 // Adjust a hex color by percentage (-100 to 100)

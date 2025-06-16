@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button } from '@/components/ui/KnopComponent';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Star, Check } from 'lucide-react';
-import { casinoBrandColors, getGlassmorphismStyle } from '@/lib/casinoKleurenData';
-import useMediaQuery from '@/hooks/gebruikMobielHook';
+import { casinoBrandColors, getGlassmorphismStyle } from '@/lib/data/casinoBrandColors';
+import useMobile from '@/hooks/useMobile';
 
 export interface CasinoCardProps {
   casino: {
@@ -22,7 +22,7 @@ export interface CasinoCardProps {
 }
 
 const CasinoCard: React.FC<CasinoCardProps> = ({ casino, getCasinoUrl, layout = 'auto', className }) => {
-  const isMobile = useMediaQuery('(max-width: 1023px)');
+  const isMobile = useMobile('(max-width: 1023px)');
   const forceMobile = layout === 'mobile';
   const forceDesktop = layout === 'desktop';
   const showMobile = forceMobile || (layout === 'auto' && isMobile);

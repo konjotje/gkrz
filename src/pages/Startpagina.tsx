@@ -1,52 +1,14 @@
 import React from 'react';
-import Layout from '@/components/layout/HoofdLayoutComponent';
+import MainLayout from '@/components/layout/MainLayout';
 import { Helmet } from 'react-helmet-async';
-import { Button } from '@/components/ui/KnopComponent';
-import { Link } from 'react-router-dom';
-import {
-  ArrowRight,
-  Star,
-  Shield,
-  Award,
-  Gift,
-  Check,
-  MessageCircle,
-  Calendar,
-  Clock,
-  Info,
-  ThumbsUp,
-  Users,
-  User,
-} from 'lucide-react';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import useIsMobile from '@/hooks/gebruikMobielHook';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
-import { casinoBrandColors } from '@/lib/casinoKleurenData';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
-import CasinoLogoSlider from '@/components/CasinoLogoSlider';
-import { casinoLogoStyles } from '@/lib/styles';
-import { useMediaQuery } from 'react-responsive';
-import { blogPosts } from '@/lib/blogBerichtenData';
-import { BlogPostCard } from '@/components/BlogPostCard';
-import CasinoCard from '@/components/CasinoCard';
-import { casinos, getCasinoUrl } from '@/pages/CasinoOverzichtPagina';
-import BonusCardRedesign from '@/components/BonusCardRedesign';
+import { BonusCardRedesign } from '@/components/features/casino/BonusCardRedesign';
+import CasinoLogoSlider from '@/components/features/casino/CasinoLogoSlider';
+import CasinoCard from '@/components/features/casino/CasinoCard';
+import { blogPosts } from '@/lib/data/blogPosts';
+import { casinoBrandColors } from '@/lib/data/casinoBrandColors';
+import { Button } from '@/components/ui/button';
+import useMobile from '@/hooks/useMobile';
+import { casinos, getCasinoUrl } from '@/pages/CasinoOverviewPage';
 
 const Index = () => {
   const featuredCasinos = [
@@ -162,7 +124,7 @@ const Index = () => {
     },
   ];
 
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMobile();
 
   const renderCasinoCard = (casino: (typeof featuredCasinos)[0]) => (
     <Card
@@ -241,7 +203,7 @@ const Index = () => {
   );
 
   return (
-    <Layout>
+    <MainLayout>
       <Helmet>
         <title>Gokkerz.nl | Beste Online Casino's Nederland 2025</title>
         <meta
@@ -860,7 +822,7 @@ const Index = () => {
       {/* Vercel Analytics */}
       <Analytics />
       <SpeedInsights />
-    </Layout>
+    </MainLayout>
   );
 };
 

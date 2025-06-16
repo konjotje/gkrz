@@ -1,0 +1,3 @@
+export const blogPosts = [
+  // ...inhoud uit blogBerichtenData.ts...
+];

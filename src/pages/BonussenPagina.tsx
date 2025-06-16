@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from '@/components/layout/HoofdLayoutComponent';
+import MainLayout from '@/components/layout/MainLayout';
 import { Helmet } from 'react-helmet-async';
-import { Button } from '@/components/ui/KnopComponent';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
@@ -34,18 +34,18 @@ import {
   Calendar,
   Users,
 } from 'lucide-react';
-import { casinoBrandColors } from '@/lib/casinoKleurenData';
+import { casinoBrandColors } from '@/lib/data/casinoBrandColors';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import HeroHeader from '@/components/HeroHeader';
+import HeroHeader from '@/components/features/home/HeroHeader';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import { BonusCard } from '@/components/BonusCard';
-import BonusCardRedesign from '@/components/BonusCardRedesign';
+import { BonusCard } from '@/components/features/casino/BonusCard';
+import BonusCardRedesign from '@/components/features/casino/BonusCardRedesign';
 
 const Bonussen = () => {
   // Bonus offers data with all casinos
@@ -399,7 +399,7 @@ const Bonussen = () => {
   };
 
   return (
-    <Layout>
+    <MainLayout>
       <Helmet>
         <title>Casino Bonussen 2025 | Beste Online Casino Bonussen Nederland</title>
         <meta
@@ -1043,7 +1043,7 @@ const Bonussen = () => {
       <Analytics />
       {/* Vercel Speed Insights */}
       <SpeedInsights />
-    </Layout>
+    </MainLayout>
   );
 };
 

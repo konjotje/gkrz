@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
-const Cookiebeleid = () => {
+const CookiePolicyPage = () => {
   return (
     <Layout>
       <Helmet>
@@ -74,4 +74,4 @@ const Cookiebeleid = () => {
   );
 };
 
-export default Cookiebeleid;
+export default CookiePolicyPage;
