@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 <div className="container mx-auto px-4 py-8">
   <h1 className="text-4xl font-bold text-center mb-8">Casino Bonus Guide</h1>
@@ -16,7 +16,7 @@ import Link from 'next/link';
           Een welkomstbonus is een aanbieding die nieuwe spelers ontvangen wanneer ze zich aanmelden bij een online casino. 
           Het kan een stortingsbonus, gratis spins of een combinatie van beide zijn.
         </p>
-        <Link href="/welkomstbonus" className="text-blue-500 hover:underline">
+        <Link to="/welkomstbonus" className="text-blue-500 hover:underline">
           Lees meer over de welkomstbonus
         </Link>
       </div>
@@ -27,7 +27,7 @@ import Link from 'next/link';
           Een no deposit bonus is een type bonus waarbij spelers geen storting hoeven te doen om de bonus te ontvangen. 
           Dit soort bonussen zijn zeldzaam en worden vaak aangeboden als gratis speeltegoed of gratis spins.
         </p>
-        <Link href="/no-deposit-bonus" className="text-blue-500 hover:underline">
+        <Link to="/no-deposit-bonus" className="text-blue-500 hover:underline">
           Lees meer over de no deposit bonus
         </Link>
       </div>
@@ -38,7 +38,7 @@ import Link from 'next/link';
           Free spins zijn gratis draaibeurten op gokkasten die door online casino's worden aangeboden. 
           Winsten behaald met free spins kunnen vaak worden withdrawn of gebruikt voor verdere inzet.
         </p>
-        <Link href="/free-spins" className="text-blue-500 hover:underline">
+        <Link to="/free-spins" className="text-blue-500 hover:underline">
           Lees meer over free spins
         </Link>
       </div>
@@ -49,7 +49,7 @@ import Link from 'next/link';
           Een reload bonus is een aanbieding voor bestaande spelers waarbij ze een bonus krijgen op hun volgende storting. 
           Het doel is om spelers aan te moedigen terug te keren naar het casino en verder te spelen.
         </p>
-        <Link href="/reload-bonus" className="text-blue-500 hover:underline">
+        <Link to="/reload-bonus" className="text-blue-500 hover:underline">
           Lees meer over de reload bonus
         </Link>
       </div>
@@ -60,7 +60,7 @@ import Link from 'next/link';
           Een cashback bonus is een type bonus waarbij spelers een percentage van hun verliezen terugkrijgen als bonusgeld. 
           Dit biedt een zekere mate van bescherming tegen verliezen en moedigt spelers aan om door te spelen.
         </p>
-        <Link href="/cashback-bonus" className="text-blue-500 hover:underline">
+        <Link to="/cashback-bonus" className="text-blue-500 hover:underline">
           Lees meer over de cashback bonus
         </Link>
       </div>
@@ -71,7 +71,7 @@ import Link from 'next/link';
           VIP bonussen zijn exclusieve aanbiedingen voor loyale spelers van een online casino. 
           Deze bonussen kunnen bestaan uit hogere limieten, persoonlijke accountmanagers, en speciale promoties.
         </p>
-        <Link href="/vip-bonus" className="text-blue-500 hover:underline">
+        <Link to="/vip-bonus" className="text-blue-500 hover:underline">
           Lees meer over de VIP bonus
         </Link>
       </div>

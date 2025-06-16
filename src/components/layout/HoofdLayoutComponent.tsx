@@ -2,8 +2,7 @@ import React from 'react';
 import KoptekstComponent from './KoptekstComponent';
 import VoettekstComponent from './VoettekstComponent';
 import { ScrollToTopOnMount } from '../ScrollToTop';
-// import { Button } from '../../ui/button';
-import { Button } from '@mui/material'; // Or another UI library you are using, or create your own Button component
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Clock, MessageCircle } from 'lucide-react';
 
